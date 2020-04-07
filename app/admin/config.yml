@@ -3,3 +3,14 @@ backend:
   repo: leliamesteban/defaultApp
 
 publish_mode: editorial_workflow
+
+collections:
+ - name: "skill" # Used in routes, e.g., /admin/collections/blog
+    label: "Skill" # Used in the UI
+    folder: "app/skills" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "skill"}
+      - {label: "Skill", name: "skill", widget: "string"}
+      - {label: "PX", name: "px", widget: "number"}
+      - {label: "Details", name: "details", widget: "markdown"}
